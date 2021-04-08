@@ -12,43 +12,28 @@ private:
 
 	wxButton* m_cancel;
 	wxButton* m_next;
+	
+	wxButton* m_b_groupe[8];
 
-	wxButton* m_b_groupe1 = nullptr;
-	wxButton* m_b_groupe2 = nullptr;
-	wxButton* m_b_groupe3 = nullptr;
-	wxButton* m_b_groupe4 = nullptr;
-	wxButton* m_b_groupe5 = nullptr;
-	wxButton* m_b_groupe6 = nullptr;
-	wxButton* m_b_groupe7 = nullptr;
-	wxButton* m_b_groupe8 = nullptr;
-
-	wxButton* m_b_rm1 = nullptr;
-	wxButton* m_b_rm2 = nullptr;
-	wxButton* m_b_rm3 = nullptr;
-	wxButton* m_b_rm4 = nullptr;
-	wxButton* m_b_rm5 = nullptr;
-	wxButton* m_b_rm6 = nullptr;
-	wxButton* m_b_rm7 = nullptr;
-	wxButton* m_b_rm8 = nullptr;
+	wxButton* m_b_rm[8];
 
 	wxListBox* m_continentlist = nullptr;
-	wxListBox* m_groupe1 = nullptr;
-	wxListBox* m_groupe2 = nullptr;
-	wxListBox* m_groupe3 = nullptr;
-	wxListBox* m_groupe4 = nullptr;
-	wxListBox* m_groupe5 = nullptr;
-	wxListBox* m_groupe6 = nullptr;
-	wxListBox* m_groupe7 = nullptr;
-	wxListBox* m_groupe8 = nullptr;
 
+	wxListBox* m_groupe[8];
 	wxButton* m_back = nullptr;
 	wxStaticText* m_select;
 
 	wxComboBox* m_combobox;
 
+	bool firstselection = false;
+
 	cMenu1* m_menu1_frame = nullptr;
 	cNewComp* m_newcomp_frame = nullptr;
 	cNextcreate* m_nextcreate_frame = nullptr;
+
+	wxButton* m_delete;
+
+	
 public:
 	cCreate();
 	~cCreate();
@@ -57,7 +42,10 @@ public:
 	void f_display(wxCommandEvent& evt);
 	void b_back(wxCommandEvent& evt);
 	void b_next(wxCommandEvent& evt);
+	void b_addteam(wxCommandEvent& evt);
+	void b_rm(wxCommandEvent& evt);
 
+	void deletefunction(wxCommandEvent& evt);
 	wxDECLARE_EVENT_TABLE();
 };
 

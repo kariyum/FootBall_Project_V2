@@ -19,7 +19,8 @@ cQuit::cQuit(cMenu1* ptr_menu1) : wxFrame(nullptr, wxID_ANY, "Exit Window", wxPo
 	int sx = 90;
 	int sy = 30;
 	m_yes = new wxButton(this, 2, "Yes",wxPoint(x, y), wxSize(sx, sy));
-	m_cancel = new wxButton(this, 3, "Cancel", wxPoint(x + dx, y), wxSize(sx, sy));
+	m_cancel = new wxButton(this, 3, "Cancel", wxPoint(x + dx, y-3), wxSize(sx, sy+6));
+	m_cancel->SetBackgroundColour(wxColor(251, 94, 94));
 
 	m_yes->SetFont(myfont);
 	m_cancel->SetFont(myfont);

@@ -21,20 +21,24 @@
   <ItemGroup>
     <ClInclude Include="cApp.h" />
     <ClInclude Include="cCreate.h" />
+    <ClInclude Include="cKnockout.h" />
     <ClInclude Include="cMain.h" />
     <ClInclude Include="cMenu1.h" />
     <ClInclude Include="cNewComp.h" />
     <ClInclude Include="cNextcreate.h" />
     <ClInclude Include="cQuit.h" />
+    <ClInclude Include="cStartmatch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cApp.cpp" />
     <ClCompile Include="cCreate.cpp" />
+    <ClCompile Include="cKnockout.cpp" />
     <ClCompile Include="cMain.cpp" />
     <ClCompile Include="cMenu1.cpp" />
     <ClCompile Include="cNewComp.cpp" />
     <ClCompile Include="cNextcreate.cpp" />
     <ClCompile Include="cQuit.cpp" />
+    <ClCompile Include="cStartmatch.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

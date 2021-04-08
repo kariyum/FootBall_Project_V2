@@ -36,6 +36,12 @@
     <ClInclude Include="cNextcreate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="cKnockout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cStartmatch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cApp.cpp">
@@ -57,6 +63,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="cNextcreate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cKnockout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cStartmatch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

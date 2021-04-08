@@ -34,7 +34,11 @@ cMain::cMain() : wxFrame(nullptr, wxID_ANY, "Football Competition Management", w
 }
 
 cMain::~cMain() {
-
+	delete m_showpass;
+	delete m_passwordEntry;
+	delete m_passwordLabel;
+	delete m_btn_connect;
+	delete m_title1;
 }
 
 void cMain::OnConnect(wxCommandEvent& evt) { 
