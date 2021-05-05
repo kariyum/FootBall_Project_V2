@@ -6,9 +6,9 @@ EVT_BUTTON(3, b_cancel)
 EVT_BUTTON(2, b_yes)
 wxEND_EVENT_TABLE()
 
-cQuit::cQuit(cMenu1* ptr_menu1) : wxFrame(nullptr, wxID_ANY, "Exit Window", wxPoint(500, 250), wxSize(400, 225), wxSYSTEM_MENU | wxCAPTION | wxCLIP_CHILDREN) {
+cQuit::cQuit(cMenu1* ptr_menu1) : wxFrame(nullptr, wxID_ANY, "Exit Window", wxPoint(600, 350), wxSize(400, 225), wxSYSTEM_MENU | wxCAPTION | wxCLIP_CHILDREN) {
 	wxFont myfont(12, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL);
-	
+	this->SetBackgroundColour(wxColor(220, 220, 220));
 	m_sure = new wxStaticText(this, wxID_ANY, "Are you sure you want to exit?", wxPoint(60, 60));
 	m_sure->SetFont(wxFont(15, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL));
 
@@ -20,11 +20,14 @@ cQuit::cQuit(cMenu1* ptr_menu1) : wxFrame(nullptr, wxID_ANY, "Exit Window", wxPo
 	int sy = 30;
 	m_yes = new wxButton(this, 2, "Yes",wxPoint(x, y), wxSize(sx, sy));
 	m_cancel = new wxButton(this, 3, "Cancel", wxPoint(x + dx, y-3), wxSize(sx, sy+6));
-	m_cancel->SetBackgroundColour(wxColor(251, 94, 94));
-
+	//m_cancel->SetBackgroundColour(wxColor(251, 94, 94));
+	m_cancel->SetForegroundColour(wxColor(255, 0, 0));
 	m_yes->SetFont(myfont);
 	m_cancel->SetFont(myfont);
-
+	
+	//wxBitmapButton* button1;
+	//button1 = new wxBitmapButton(this, wxID_ANY, wxBitmap("C:/Users/S B S/Documents/meme1.png", wxBITMAP_TYPE_PNG), wxPoint(150, 30), wxSize(sx, sy + 6));
+	//button1->Bind(wxCommandEvent, &b_cancel, this);
 	ptr_menu1_att = ptr_menu1; //ptr_menu1 is an automatic variable...
 }
 

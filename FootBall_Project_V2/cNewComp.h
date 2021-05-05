@@ -17,7 +17,7 @@ private:
 	wxButton* m_create = nullptr;
 	wxButton* m_cancel = nullptr;
 	 
-	wxChoice* m_year = nullptr;
+	wxTextCtrl* m_year = nullptr;
 
 	cCreate* m_createframe = nullptr;
 	cMenu1* m_menu1_frame = nullptr;

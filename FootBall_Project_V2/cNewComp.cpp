@@ -15,14 +15,15 @@ cNewComp::cNewComp() : wxFrame(nullptr, wxID_ANY, "New Competition", wxPoint(400
 	m_nameLabel = new wxStaticText(this, wxID_ANY, wxT("Name "), wxPoint(60, 140));
 
 	m_name = new wxTextCtrl(this, wxID_ANY, "", wxPoint(145, 140), wxSize(200, 35));
-	m_year = new wxChoice(this, 13, wxPoint(145, 80), wxSize(200, 35));
-	
+	m_year = new wxTextCtrl(this, 13,"", wxPoint(145, 80), wxSize(200, 35));
+	/*
 	for (int i = 2021; i < 2031; i++) {
 		wxString s;
 		s << i;
 		m_year->AppendString(s);
 	}
 	m_year->Select(0);
+	*/
 	m_cancel = new wxButton(this, 12, "Cancel", wxPoint(300, 200), wxSize(90, 30));
 	m_create = new wxButton(this, 11, "Create", wxPoint(110, 200), wxSize(90, 30));
 
@@ -33,7 +34,7 @@ cNewComp::cNewComp() : wxFrame(nullptr, wxID_ANY, "New Competition", wxPoint(400
 	wxFont label(17, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL);
 	m_yearLabel->SetFont(label);
 	m_nameLabel->SetFont(label);
-	m_year->SetFont(wxFont(12, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL));
+	m_year->SetFont(label);
 	m_name->SetFont(label);
 
 	wxFont btn_font(11, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL);
@@ -52,9 +53,19 @@ void cNewComp::b_cancel(wxCommandEvent& evt) {
 }
 void cNewComp::b_create(wxCommandEvent& evt) {
 	//check digits in year label prompt dialog msg
+	
+	wxString s = "C:/Users/S B S/source/repos/FootBall_Project_V2/FootBall_Project_V2/" + m_name->GetValue();
+
 	m_createframe = new cCreate();
 	m_createframe->Show();
 	this->Close();
+	/*
+	bool bDir;
+	LPCSTR lpPathName = s;
+	bDir = CreateDirectoryA(lpPathName, NULL);
+	//system("PAUSE");
+	*/
+
 	evt.Skip();
 }
 

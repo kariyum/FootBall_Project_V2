@@ -1,5 +1,6 @@
 #pragma once
 #include "wx/wx.h"
+#include "api.h"
 
 class cMenu1;
 class cNewComp;
@@ -33,7 +34,8 @@ private:
 
 	wxButton* m_delete;
 
-	
+	int teams_tab[8][6];
+	vector<pair<wxString, wxString>> group_names;
 public:
 	cCreate();
 	~cCreate();
@@ -44,7 +46,8 @@ public:
 	void b_next(wxCommandEvent& evt);
 	void b_addteam(wxCommandEvent& evt);
 	void b_rm(wxCommandEvent& evt);
-
+	void onclose(wxCloseEvent& evt);
+	void initializetab();
 	void deletefunction(wxCommandEvent& evt);
 	wxDECLARE_EVENT_TABLE();
 };
